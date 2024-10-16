@@ -1,0 +1,173 @@
+/*--------------------------------------------------------------
+  10. Hero
+----------------------------------------------------------------*/
+.cs_hero.cs_style_1 {
+  background-color: $primary;
+  padding-top: 195px;
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  @media (max-width: 991px) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (max-width: 575px) {
+    padding-top: 150px;
+  }
+
+  .cs_hero_subtitle {
+    margin-bottom: 45px;
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .cs_hero_title {
+    margin-bottom: 20px;
+  }
+
+  .cs_hero_shape1,
+  .cs_hero_shape2,
+  .cs_hero_shape3 {
+    position: absolute;
+  }
+
+  .cs_hero_shape1 {
+    width: 128px;
+    height: 128px;
+    border-radius: 100%;
+    background-color: #34ff7e;
+    filter: blur(175px);
+    top: 0;
+    left: 0;
+    animation: heroShape1Anim 10s linear infinite;
+  }
+
+  .cs_hero_shape2 {
+    top: 37%;
+    left: 18%;
+    animation: animo-x 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  .cs_hero_shape3 {
+    top: -220px;
+    right: -143px;
+    height: 740px;
+    width: 740px;
+    border: 50px solid #fbaaab;
+    opacity: 0.03;
+    border-radius: 50%;
+  }
+}
+
+.cs_hero_title {
+  font-size: 68px;
+  line-height: 1.4em;
+
+  @media (max-width: 1400px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 42px;
+  }
+}
+
+.cs_hero.cs_style_2 {
+  height: 100%;
+  min-height: 1000px;
+  padding: 200px 0px 140px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  @media (max-width: 991px) {
+    padding: 140px 0 80px;
+  }
+
+  .cs_hero_text {
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 991px) {
+      min-width: 100%;
+    }
+
+  }
+
+  .cs_hero_title {
+    margin-bottom: 47px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .cs_hero_subtitle {
+    margin-bottom: 45px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .cs_hero_thumb {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cs_hero_shape1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .cs_hero_shape2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: animo-xyz 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@keyframes animo-x {
+  50% {
+    transform: translateX(100px) rotate(90deg);
+  }
+}
+
+@keyframes animo-xyz {
+  50% {
+    transform: translateX(50px) translateY(50px) rotateX(30deg);
+  }
+}
+
+@keyframes heroShape1Anim {
+  50% {
+    filter: blur(130px);
+  }
+}
